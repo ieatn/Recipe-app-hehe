@@ -24,9 +24,21 @@ body {
 }
 .favorites-container {
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    gap: 1rem;
     flex-wrap: wrap;
+    border: 1px solid red;
+}
+.favorites-container div {
+    width: 75px;
+    height: 100%;
+    border: 1px solid black;
+    white-space: nowrap;
+}
+.favorites-container p {
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .favorites-container img {
     border-radius: 100px;
