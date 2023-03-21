@@ -17,8 +17,24 @@ const createMeal = async () => {
         <button id="favorite">Favorite</button>
         </div>
     `
+    const favBtn = document.querySelector('#favorite')
+    favBtn.addEventListener('click', () => favoriteMeal(newMeal))
+
+}
+
+const favoriteMeal = (newMeal) => {
+    const fav = document.createElement('div')
+    fav.innerHTML = 
+    `
+        <div class="favorites">
+            <img src="${newMeal.meals[0].strMealThumb}" alt="">
+            <p>${newMeal.meals[0].strMeal}</p>
+        </div>
+    `
+    favoritesContainer.appendChild(fav)
 }
 
 const btn = document.querySelector('#btn')
 const bottom = document.querySelector('.bottom')
+const favoritesContainer = document.querySelector('.favorites-container')
 btn.addEventListener('click', createMeal)
